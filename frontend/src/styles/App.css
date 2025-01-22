@@ -1,0 +1,196 @@
+:root {
+  --primary-color: #2a2e43;
+  --secondary-color: #4a90e2;
+  --accent-color: #f85f6a;
+  --light-bg: #f8f9fa;
+  --text-dark: #2d3436;
+  --text-light: #ffffff;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: var(--light-bg);
+}
+
+/* Layout */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.content {
+  background: var(--text-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+/* Header */
+.header {
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+/* Forms */
+.form-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: var(--text-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+}
+
+button {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+button:hover {
+  background-color: #357abd;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Attendance Section */
+.attendance-container {
+  background: var(--text-light);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.attendance-container h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+/* Table Styles */
+.attendance-report table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: var(--text-light);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.attendance-report th,
+.attendance-report td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.attendance-report th {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.attendance-report tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Status Messages */
+.success-message {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Loading Animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--text-light);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .attendance-report table {
+    display: block;
+    overflow-x: auto;
+  }
+}

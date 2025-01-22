@@ -1,0 +1,13 @@
+Core Functionalities:
+User Registration and Authentication: Admins can register students or employees, including uploading photos for the facial recognition database.
+Face Recognition Attendance: The system captures and recognizes faces in real-time or from photos to mark attendance automatically.
+Attendance Dashboard: An interface showing daily, weekly, and monthly attendance statistics. Admins can generate and export reports.
+Technology Stack:
+Frontend: HTML, CSS, JavaScript (React for dynamic Ul)
+Backend: Python
+Face Recognition: OpenCV and Dlib or a pre-trained model from a library like Face Recognition (built on top of Dlib)
+Database: PostgreSQL
+Team Composition:
+Pascu Mihnea-Dominic
+Popa Sebastian-Gabriel
+
