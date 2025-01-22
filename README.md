@@ -16,7 +16,6 @@ Real-time attendance tracking system using facial recognition technology.
 
 ## Setup
 # Backend
-cd app
 pip install -r requirements.txt
 python app.py
 
